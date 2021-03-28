@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ADD YOUR BANDS!</h1>
+    <form action="/addBand" method="post">
+        <input type="text" name="name" id="name" required>
+        <input type="number" name="albums" id="albums" required>
+        <input type="text" name="genre" id="genre">
+        <button type="submit">Submit</button>
+    </form>
+    <ul>
+        <% for(let i=0;i<info.length;i++){ %>
+            <li>
+                <span><%= info[i].name %></span>
+                <span><%= info[i].albums %></span>
+                <span><%= info[i].genre %></span>
+                <a href="/" class="deletebtn">Delete</a>
+            </li>
+        <%}%>
+    </ul>
+    <script src="main.js"></script>
+</body>
+</html>
